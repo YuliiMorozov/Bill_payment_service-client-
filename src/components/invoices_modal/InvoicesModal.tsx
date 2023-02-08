@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { get } from '../../API/APIWrapper';
 import { MyInvoicesOnModal } from './myInvoices';
+import { IInvoiceModal } from './interface/IInvoicesModal';
 
-interface IInvoiceModal {
-    invoices: any
+interface InvoicesModalProps {
+    // invoices_info: IInvoiceModal
+    address_id: number
     title: string | number
     closeModal: any
 }
 
-function InvoicesModal({ title, closeModal}: IInvoiceModal ) {
+function InvoicesModal({address_id, title, closeModal}: InvoicesModalProps ) {
 
     const [invoices, setInvoices] = useState([]);
 
     async function fetchInvoices() {
       try {
-        const response = await get(`/api/service_invoice/1`)
+        const response = await get(`/api/service_invoice/` + `${address_id}`)
         setInvoices(response.data)
       } catch (e) {
         console.log(e);

@@ -33,7 +33,7 @@ export function Address({address}: AddressProps) {
         <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
           {openModal && <InvoicesModal 
                           title={ `${address.street} str. ${address.house_number}, flat #${address.flat_number}` } 
-                          invoices={ 1 } 
+                          address_id={ address.id } 
                           closeModal={setOpenModal}/>}
           <button
           onClick={() => {setOpenModal(true)}}

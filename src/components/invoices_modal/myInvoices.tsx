@@ -11,13 +11,13 @@ export function MyInvoicesOnModal({invoice}: MyInvoicesProps) {
     return (
         <tr className="border-b">
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {invoice.type_service_id}
+                {invoice.typeservice.name_service}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {invoice.service_rule_id}
+                {invoice.servicerule.tax}
             </td>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                {invoice.duty}
+                {`${invoice.duty} UAH`}
             </td>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
 

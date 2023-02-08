@@ -1,5 +1,5 @@
 export interface IInvoiceModal {
-    invoices: React.ReactNode
+    address_id: number
     title: string | number
     closeModal: any
 }

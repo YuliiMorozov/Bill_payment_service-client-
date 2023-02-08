@@ -4,6 +4,12 @@ export interface IMyInvoices {
     "cur_value": number,
     "duty": number,
     "prv_value": number,
-    "service_rule_id": number,
-    "type_service_id": number
+    "servicerule": {
+        "id": number,
+        "tax": number
+    },
+    "typeservice": {
+        "id": number,
+        "name_service": string
+    }
 }
