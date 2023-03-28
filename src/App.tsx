@@ -9,6 +9,9 @@ import { Counter } from './app/store/counter/Counter';
 import { MyInvoicePage } from './pages/Myinvoices';
 import { Logout } from './components/logout/LogOut';
 import { PostServiceInvoice } from './components/post_service_invoice/PostServiceInvoice';
+import SelectAndPostServiceInvoice from './components/select_and_post_service_invoice/SelectAndPostServiceInvoice';
+import { TestStripe } from "./pages/TestStripe"
+import { Card } from './pages/Card';
 
 
 function App() {
@@ -21,9 +24,12 @@ function App() {
           <Route path="/addresses" element={<AddressesPage />} />
           <Route path="/myinvoices" element={<MyInvoicePage />} />          
           <Route path="/services" element={<PostServiceInvoice />} />
+          <Route path="/ttt" element={<SelectAndPostServiceInvoice />} />
           <Route path="/404" element={<ErrorPage />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/test" element={<Counter />} />
+          <Route path="/test_stripe" element={<TestStripe />} />
+          <Route path="/card" element={<Card />} />
         </Routes>
     </>    
   );
